@@ -20,6 +20,6 @@ Zombie.
   4. Làm mở bài và kết bài
   5. Lồng tiếng sơ bộ
 - Lê Trường Khải
-  1. Làm canva cái sơ đồ SZR, SIZR, SIZRQ, SIZR (có thuốc chữa) bằng slide canva (có animation)
+  1. Làm canva cái sơ đồ SZR, SIZR, SIZRQ, SIZR (có thuốc chữa) bằng slide canva (có animation). Làm font latex, lưu ý là làm animation chuyển từ hệ sang sơ đồ.
   2. Kiểm chính tả
   3. Phản biện đề tài
