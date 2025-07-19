@@ -19,6 +19,7 @@ Zombie.
   3. Chứng minh Eigenvalue không thuộc hệ (trang cuối)
   4. Làm mở bài và kết bài
   5. Lồng tiếng sơ bộ
-- Phát thái và Khải
-  1. Kiểm chính tả
-  2. Phản biện đề tài
+- Lê Trường Khải
+  1. Làm canva cái sơ đồ SZR, SIZR, SIZRQ, SIZR (có thuốc chữa) bằng slide canva (có animation)
+  2. Kiểm chính tả
+  3. Phản biện đề tài
