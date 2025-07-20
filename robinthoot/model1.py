@@ -2,7 +2,7 @@ from manim import *
 import numpy as np
 
 # Parameters
-Pi = 10
+Pi = 0.01
 delta = 0.0001
 beta = 0.0095
 zeta = 0.1
@@ -43,7 +43,7 @@ class ZombieModel(Scene):
     def construct(self):
         # Grid
         plane = NumberPlane(
-            x_range=[0, 20, 2.5],
+            x_range=[0, T, 2.5],
             y_range=[0, 200, 25],
             x_length=10,
             y_length=6,
@@ -76,8 +76,8 @@ class ZombieModel(Scene):
         # Legend
         legend_items = VGroup(
             VGroup(Line(LEFT * 0.2, RIGHT * 0.2, color=BLUE), Text("Susceptibles", font_size=18)).arrange(RIGHT, buff=0.2),
-            VGroup(Line(LEFT * 0.2, RIGHT * 0.2, color=RED), Text("Zombies", font_size=18)).arrange(RIGHT, buff=0.2),
-            VGroup(Line(LEFT * 0.2, RIGHT * 0.2, color=GREEN), Text("Removed", font_size=18)).arrange(RIGHT, buff=0.2),
+            VGroup(Line(LEFT * 0.2, RIGHT * 0.2, color=GREEN), Text("Zombies", font_size=18)).arrange(RIGHT, buff=0.2),
+            VGroup(Line(LEFT * 0.2, RIGHT * 0.2, color=RED), Text("Removed", font_size=18)).arrange(RIGHT, buff=0.2),
         ).arrange(RIGHT, aligned_edge=UP, buff=0.5)
 
         legend_items.scale(0.7)
