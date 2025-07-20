@@ -1,0 +1,321 @@
+
+\usepackage[utf8]{inputenc}
+\usepackage{adjustbox}
+\usepackage[main=vietnamese,english]{babel}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{bbding}
+\usepackage{graphicx}
+\usepackage{titletoc}
+\usepackage{eso-pic}
+\usepackage{tikz}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{subfig}
+\usepackage{wrapfig}
+
+\usepackage[a4paper, left=1in, right=1in, top=0.7in, bottom=1in]{geometry}
+\usepackage{setspace}
+\usepackage[normalem]{ulem}
+\usepackage{amsthm}
+
+\definecolor{dk}{rgb}{0.0, 0.0, 0.6} % Change to a softer dark blue color
+\newcommand{\heart}{\textcolor{dk}{\ding{170}}} % Define a dark blue heart symbol
+\renewcommand{\qedsymbol}{\heart} % Replace the square at the end of proofs with the heart symbol
+\newcommand{\vocab}[1]{\textbf{\color{black}\sffamily #1}}
+
+\newcommand{\vocabsh}[1]{\textbf{\color{c}\sffamily #1}}
+\newcommand{\vocabh}[1]{\textbf{\color{black}\sffamily #1}}
+\newcommand{\vocabf}[1]{\textit{\sffamily #1}}
+\onehalfspacing % Chọn 1.5 khoảng cách giữa các dòng
+\usepackage{enumitem}
+\usepackage{amssymb} % for \blackcircle
+\usepackage{amsmath}
+\usepackage[framemethod=TikZ]{mdframed}
+\definecolor{bk}{rgb}{0.0, 0.0, 0.61}
+\definecolor{p}{rgb}{0.1, 0.1, 0.44}
+\definecolor{c}{rgb}{0.55, 0.27, 0.07}
+\newtheorem{lemma}{Bổ đề}
+\newtheorem{theorem}{\textcolor{p}{Định lý}}
+\usepackage{pifont}
+\usepackage{mathtools}
+\usepackage{etextools}
+\usepackage{ifthen}
+\usepackage{hyperref}
+\usepackage{lmodern}
+\renewcommand*\contentsname{\LARGE MỤC LỤC}
+%\renewcommand\familydefault{\sfdefault}
+\usepackage{mathpazo}
+\renewcommand{\proofname}{\vocab{Lời giải}}
+
+
+\renewcommand{\thesection}{\LARGE\textcolor{black}{\arabic{section}.}}
+
+\renewcommand{\thesubsection}{\large \Alph{subsection} }
+\newtheorem{m}{\textcolor{p}{Mệnh đề}}
+\newtheorem{baitoan}{\vocab{\textit{Bài toán}}}[section]
+\newtheorem{bod}{\vocab{Bổ đề}}[section]
+\usepackage{chngcntr}
+\newtheorem{g}{\begin{center}\textbf{\textcolor{p}{Bài giải}}\end{center}}
+\usepackage[inline]{asymptote}
+\newtheorem{btv}{\vocab{Bài toán}}[section]
+\definecolor{y}{rgb}{1.0, 0.88, 0.21}
+\usepackage{CJKutf8}
+\pagestyle{fancy}
+\usepackage{multido}
+
+\newcommand{\Pointilles}[1]{%
+  \par\nobreak
+  \noindent\rule{0pt}{1.5\baselineskip}% Provides a larger gap between the preceding paragraph and the dots
+  \multido{}{#1}{\noindent\makebox[\linewidth]{\dotfill}\endgraf}% ... dotted lines ...
+  \bigskip% Gap between dots and next paragraph
+}
+% Redefine \Leftrightarrow to \Lra
+\let\lra\Leftrightarrow
+\let\Leftrightarrow\relax
+\newcommand{\ov}{\overline}
+\newcommand{\fra}{\forall}
+\newcommand{\xyr}{\forall x,y \in \bb{R}}
+\newcommand{\xr}{\forall x\in \bb{R}}
+\newcommand{\yr}{\forall y\in \bb{R}}
+\newcommand{\xyro}{\forall x,y \in \bb{R^+}}
+\newcommand{\xro}{\forall x\in \bb{R^+}}
+\newcommand{\yro}{\forall y\in \bb{R^+}}
+\newcommand{\bb}{\mathbb}
+\newcommand{\dbi}{\displaystyle\binom}
+\newcommand{\dsum}{\displaystyle\sum}
+\newcommand{\dlim}{\displaystyle\lim_{n \to +\infty}}
+\newcommand{\blim}{\displaystyle\lim}
+\newcommand{\dprod}{\displaystyle\prod}
+\newcommand{\dint}{\displaystyle\int}
+\newcommand{\csum}{\dsum_{cyc}}
+% Redefine \Rightarrow to \Ra
+\theoremstyle{definition} % chữ đứng
+\newtheorem{definition}{Định nghĩa}
+\let\ra\Rightarrow
+\let\Rightarrow\relax
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.0, 0.5, 1.0}
+\newcommand{\DeclarePairedDelimiterCase}[2]{%
+\newcommand#1[1][]{%
+	\ifthenelse{\equal{##1}{normal}}%
+	{#2}%
+	{%
+		\ifthenelse{\equal{##1}{big}\OR\equal{##1}{Big}\OR\equal{##1}{bigg}\OR\equal{##1}{Bigg}}%
+		{\expandnext{#2[}{\csname##1\endcsname}]}%
+		{#2*}%        % standard case using \left and \right
+	}%
+}%
+}
+\newcommand{\DeclarePairedDelimiterY}[4][Temp]{%
+\expandafter\DeclarePairedDelimiter\csname#2#1\endcsname{#3}{#4}%
+\expandnext{\expandnext{\DeclarePairedDelimiterCase}{\csname#2\endcsname}}{\csname#2#1\endcsname}%
+}
+\newcommand{\DeclarePairedDelimiterXY}[6][Temp]{%
+\expandafter\DeclarePairedDelimiterX\csname#2#1\endcsname[#3]{#4}{#5}{#6}%
+\expandnext{\expandnext{\DeclarePairedDelimiterCase}{\csname#2\endcsname}}{\csname#2#1\endcsname}%
+} 
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+\lstset{
+  frame=none, % Xóa khung ở trên và dưới
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  keywordstyle=\color{blue},      % Màu sắc cho các từ khóa
+  commentstyle=\color{green!60},  % Màu sắc cho các comment
+  stringstyle=\color{brown},        % Màu sắc cho chuỗi
+  numberstyle=\tiny\color{gray},  % Màu sắc cho số dòng
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+\renewcommand{\headrulewidth}{0.005em}
+
+\makeatother
+\makeatletter
+
+\fancypagestyle{plain}{%
+	\fancyhf{}%
+	\fancyfoot[C]{\thepage}
+	\renewcommand{\headrulewidth}{0pt}%
+	
+}
+
+\newcommand{\circled}[1]{\tikz[baseline=(char.base)]{
+		\node[shape=circle,fill,inner sep=3pt,text=white] (char) {\footnotesize #1};}}
+\renewcommand{\arraystretch}{1.5}
+\let\oldfrac\frac
+\renewcommand{\frac}[2]{\displaystyle\oldfrac{#1}{#2}}
+% Định nghĩa môi trường mới
+\newmdenv[linecolor=black, linewidth=0.02cm]{myframe}
+\newmdenv[linecolor=bk, backgroundcolor=blue!4,  linewidth=0.04	cm]{fr}
+% Môi trường "bài toán"
+\newenvironment{bt}
+{
+	\color{p}\begin{myframe}
+		\begin{baitoan}\upshape
+		}
+		{
+		\end{baitoan}
+	\end{myframe}
+}
+\newenvironment{bd}
+{
+	
+		
+		\begin{bod}
+		}
+		{
+		\end{bod}
+
+}
+\newenvironment{thr}
+{
+	\color{black}\begin{fr}
+		\begin{theorem}
+		}
+		{
+		\end{theorem}
+	\end{fr}
+}
+\newenvironment{md}
+{\m\upshape}
+{\endm}
+\newenvironment{btvn}
+{
+	
+		
+		\begin{btv}\upshape
+		}
+		{
+		\end{btv}
+
+}
+\newtheorem{lemm}{\vocab{Bổ đề}}
+\renewcommand{\thelemm}{\vocab{\arabic{lemm}}}
+\newcounter{solution}
+\renewcommand\proofname{}
+\newenvironment{sol}{%
+\refstepcounter{solution} 
+        \begin{proof}[\unskip\nopunct]%
+	\vocab{Lời giải \thesolution.} 
+}{% 
+        \end{proof}%
+}
+\newenvironment{pro}{%
+
+	\textbf{\vocab{Chứng minh}}%
+
+\begin{proof}[\unskip\nopunct]%
+}{\end{proof}%
+}
+
+\renewcommand\them{\textcolor{p}{\arabic{m}}}
+\renewcommand\thebtv{\vocab{\arabic{btv}}}
+
+\newcommand{\p}[1]{\textbf{\textcolor{p}{#1}}}
+\newcommand{\pf}[1]{\textit{\textcolor{p}{#1}}}
+\renewcommand\thebaitoan{\vocab{\arabic{baitoan}}}
+\renewcommand\thebod{\vocab{\arabic{bod}}}
+\newcounter{theo}[section]\setcounter{theo}{0}
+\renewcommand{\thetheo}{\arabic{section}.\arabic{theo}}
+\newenvironment{theo}[2][]{%
+	\refstepcounter{theo}%
+	\ifstrempty{#1}%
+	{\mdfsetup{%
+			frametitle={%
+				\tikz[baseline=(current bounding box.east),outer sep=0pt]
+				\node[anchor=east,rectangle,fill=white]
+				{\strut };}}
+	}%
+	{\mdfsetup{%
+			frametitle={%
+				\tikz[baseline=(current bounding box.east),outer sep=0pt]
+				\node[anchor=east,rectangle,fill=yellow!70, draw=black, line width=0.03cm]
+				{\strut \vocab{#1}};}}%
+	}%
+	\mdfsetup{innertopmargin=5pt,linecolor=black,%
+		linewidth=0.03cm,topline=true,%
+		frametitleaboveskip=\dimexpr-\ht\strutbox\relax, 
+	}
+	\begin{mdframed}[]\relax%
+		\label{#2}}{\end{mdframed}}
+	
+\newcounter{lem}[section]\setcounter{lem}{0}
+\renewcommand{\thelem}{\arabic{section}.\arabic{lem}}
+\newenvironment{lem}[2][]{%
+	\refstepcounter{lem}%
+	\ifstrempty{#1}%
+	{\mdfsetup{%
+			frametitle={%
+				\tikz[baseline=(current bounding box.east),outer sep=0pt]
+				\node[anchor=east,rectangle,fill=white]
+				{\strut };}}
+	}%
+	{\mdfsetup{%
+			frametitle={%
+				\tikz[baseline=(current bounding box.east),outer sep=0pt]
+				\node[anchor=east,rectangle,fill=white]
+				{\strut \vocab{#1}};}}%
+	}%
+	\mdfsetup{linecolor=black,%
+		linewidth=0.03cm,topline=true,%
+		frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+	}
+	\begin{mdframed}[]\relax%
+		\label{#2}}{\end{mdframed}}
+		\newcommand{\fa}{%
+		\begin{tikzpicture}[x=1.4ex, y=1.4ex, scale=0.5, baseline=-.8ex]
+			\draw (-1,1)  -- (-1,0) -- (1,0) -- (1,-1);
+			\draw (-1,-1) -- (0,-1) -- (0,1) -- (1,1);
+		\end{tikzpicture}%
+	}
+	
+	\newcommand{\func}[1]{f\left(#1\right)}
+	\renewcommand*\l@section[2]{%
+	
+	\ifnum\c@tocdepth>\@ne
+	  
+	  \addpenalty\@secpenalty
+	  \addvspace{1.3em \@plus\p@}% increase space between line and section
+	  \setlength\@tempdima{2em}%
+	  \begingroup
+	  	\large
+		\parindent \z@ \rightskip \@pnumwidth
+		\parfillskip -\@pnumwidth
+		\bfseries #1\leavevmode
+		\hfil \hbox to \@pnumwidth{\hss #2}\par
+		\kern 5pt
+		\hrule
+		\kern 1pt
+	  \endgroup
+	\else
+	  \addvspace{1.0em \@plus\p@}%
+	\fi}
+	\renewcommand\l@subsection[2]{%
+	\ifnum\c@tocdepth>\@ne
+	  \addpenalty\@secpenalty
+	  \addvspace{1em \@plus\p@}% increase space between line and section
+	  \setlength\@tempdima{2em}%
+	  \begingroup
+		\large
+		\parindent \z@ \rightskip \@pnumwidth
+		\parfillskip -\@pnumwidth
+		\advance\leftskip\@tempdima
+		\normalfont #1\leavevmode
+		\hfil \hbox to \@pnumwidth{\hss #2}\par
+		\kern 5pt
+		\hrule
+		\kern 1pt
+	  \endgroup
+	\else
+	  \addvspace{1.0em \@plus\p@}%
+	\fi}
+  \makeatother
