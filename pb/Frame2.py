@@ -13,8 +13,7 @@ class SZRExplanation(Scene):
         self.show_pi_note()
         self.show_beta_sz_explanation()
         self.show_delta_s_explanation()
-        self.show_population_limit()
-        self.show_stability_reasoning()
+
 
     def show_system(self):
         eq_S = MathTex(r"S' = \Pi - \beta S Z - \delta S", tex_template=my_template, font_size=40)
