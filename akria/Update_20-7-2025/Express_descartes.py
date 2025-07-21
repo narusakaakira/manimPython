@@ -62,7 +62,7 @@ class ExpressDescartes(Scene):
 
         arrow_v =  Line(
             start=plane.c2p(0, 0),
-            end=plane.c2p(4, 2),
+            end=plane.c2p(2, 2),
             color = BLUE,
             stroke_width=1.5
         ).add_tip(tip_length=0.2, tip_width=0.2)
@@ -81,10 +81,11 @@ class ExpressDescartes(Scene):
         label_j = MathTex(r"\vec{j}", color=RED).scale(0.7)
         label_j.next_to(arrow_j.get_end(), UP+ RIGHT, buff=0.1)
 
-        vector_v_ex = MathTex(r"\scriptsize\vec{v} = \begin{bmatrix}4 \\ 2\end{bmatrix}", color=BLUE).to_corner(UR).shift(LEFT*2, DOWN*0.5)
+        vector_v_ex = MathTex(r"\scriptsize\vec{v} = \begin{bmatrix}2 \\ 2\end{bmatrix}", color=BLUE).next_to(arrow_v, UP*0.7 , buff=0.1)
 
         label_v = MathTex(r"\vec{v}", color=BLUE).scale(0.7)
-        label_v.next_to(arrow_v.get_end(), UP+ RIGHT, buff=0.1)
+        label_v.next_to(arrow_v, UP*0.7 , buff=0.1)
+
         
 
         
