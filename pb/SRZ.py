@@ -40,7 +40,7 @@ class SRZEquationsToFlowchart(Scene):
         s_to_r_v = VGroup(
             Line(S_box.get_top(), S_box.get_top() + UP*1, stroke_width=2),
             Line(S_box.get_top() + UP*1, R_box.get_top() + UP*1, stroke_width=2),
-            Arrow(R_box.get_top() + UP*1, R_box.get_top(), stroke_width=2)
+            Arrow(R_box.get_top() + UP*1 , R_box.get_top(), stroke_width=2)
         )
         s_to_r_label = MathTex(r"\delta S").move_to(S_box.get_top() + R_box.get_top() + UP*1.2).shift(UP*0.3)
 
